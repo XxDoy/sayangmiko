@@ -27,16 +27,16 @@ client.on("ready", () => {
     console.log(`Bot Ready Up \n1 \n2 \n3 \nReady To Duty ${client.user.username} !`);
 
     let statuses = [
+        `at!help |🔱 Developer By XxDoy`,
         `at!help |🌏 Berada ${client.guilds.cache.size} Server`,
         `at!help |👥 Dengan ${client.users.cache.size} Users`,
-        `at!help |📡 Online ${client.channels.cache.size} Channels`,
-        `at!help |🔱 Developer By TheBlueRose`
+        `at!help |📡 Online ${client.channels.cache.size} Channels`
     ];
 
     setInterval(function() {
 
         let status = statuses[Math.floor(Math.random() * statuses.length)]
-        client.user.setPresence({ activity: { name: status }, status: 'dnd', type: 'WATCHING' });
+        client.user.setPresence({ activity: { name: status }, status: 'Idle', type: 'WATCHING' });
     }, 1000);
 
     client.on("message", message => {
@@ -44,7 +44,7 @@ client.on("ready", () => {
         console.log(wordArray)
 
         let filterWords = [
-            "goblog",
+            "goblok",
             "anjing",
             "tolol",
             "kontol",
@@ -56,7 +56,7 @@ client.on("ready", () => {
             if (wordArray.includes(filterWords[i])) {
                 message.delete();
                 message.reply(
-                    'Aduh Kasar Bet Kamu Teh :('
+                    'Jangan Toxic Beb :('
                 );
                 break;
             }
